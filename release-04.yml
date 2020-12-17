@@ -1,0 +1,16 @@
+- hosts: kubernetes
+   become_user: root
+   become_method: sudo
+   tasks:
+
+           - name: Delete Deployment if it exists
+             command: kubectl delete deployment release-04-app
+             ignore_errors: yes
+           - name: Deploy App
+             command: kubectl create -f deploy.yml
+           - name: Delete Service if it exists
+             command: kubectl delete service release-04-app-service
+             ignore_errors: yes
+           - name: Deploy Service
+             command: kubectl create -f service.yml
+
