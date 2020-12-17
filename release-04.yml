@@ -1,4 +1,5 @@
-- hosts: kubernetes
+---
+ - hosts: kubernetes
    become_user: root
    become_method: sudo
    tasks:
