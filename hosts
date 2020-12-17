@@ -1,6 +1,6 @@
 [kubernetes]
 
-kube ansible_host=3.88.185.71 ansible_ssh_user=root ansible_ssh_pass=school1
+kube ansible_host=54.210.226.241 ansible_ssh_user=root ansible_ssh_pass=school1
 
 # This is the default ansible 'hosts' file.
 #
